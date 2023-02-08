@@ -1,0 +1,189 @@
+* {
+  background: #404040;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+}
+
+.logoLock {
+  margin-left: 10px;
+  padding-top: 10px;
+  width: 5%;
+  height: 5%;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+
+header h1 {
+  margin-left: 20px;
+}
+
+.titulogeral {
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+}
+
+main {
+  display: block;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-area {
+  background-color: rgb(125, 125, 125);
+  border: none;
+  border-radius: 10px;
+  color: #1d1d1d;
+  margin: 10px;
+  padding: 15px;
+  /*text-transform: lowercase;*/
+}
+
+::placeholder {
+  color: #505050;
+  padding: 10px;
+}
+.textarea:focus {
+  outline: none;
+}
+
+.mensagem {
+  background: #d0d0d0;
+  /*background-image: url(/imagens/boneco.png);*/
+  /* background-repeat: no-repeat;*/
+  border: none;
+  border-radius: 10px;
+  color: #1d1d1d;
+  margin: 10px;
+  padding: 15px;
+}
+
+.mensagem:focus {
+  outline: none;
+}
+
+.secaobotoes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.botoescopiarcolar {
+  margin: 0px;
+}
+
+.secaotextos {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-desencriptar,
+.btn-encriptar {
+  background: #d0d0d0;
+  border: none;
+  border-radius: 24px;
+  color: #353535;
+  cursor: pointer;
+  height: 65px;
+  width: 325px;
+  margin: 10px;
+  padding: 2px;
+}
+
+.btn-copiar,
+.btn-colar {
+  border: 1px solid #d0d0d0;
+  border-radius: 24px;
+  color: #d0d0d0;
+  cursor: pointer;
+  height: 65px;
+  width: 325px;
+  margin: 10px;
+  padding: 2px;
+}
+
+.footer a,
+p {
+  font-size: 18px;
+  color: #777777;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+  * {
+    font-size: 22px;
+    line-height: 150%;
+    align-items: center;
+  }
+
+  .logoLock {
+    margin-left: 0px;
+    padding-top: 0px;
+    width: 10%;
+  }
+
+  main {
+    display: block;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .secaotextos {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .secaobotoes {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .botoescopiarcolar {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .botoescripto {
+    padding: 0px;
+    padding: 0px;
+  }
+
+  .text-area,
+  .mensagem {
+    max-width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .btn-copiar,
+  .btn-colar,
+  .btn-encriptar,
+  .btn-desencriptar {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 250px;
+    height: 50px;
+  }
+
+  .footer a, p {
+    font-size: 12px;
+    color: #777777;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+  }
+}
