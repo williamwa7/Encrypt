@@ -16,7 +16,6 @@ function btnEncriptar() {
 
 function encriptar(stringEncriptada) {
   let matrizCodigo = [
-    [" ", "paco"],
     ["e", "enter"],
     ["i", "imes"],
     ["a", "ai"],
@@ -48,7 +47,6 @@ function btnDesencriptar() {
 
 function desencriptar(stringDesencriptada) {
   let matrizCodigo = [
-    [" ", "paco"],
     ["e", "enter"],
     ["i", "imes"],
     ["a", "ai"],
