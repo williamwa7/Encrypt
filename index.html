@@ -6,34 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
-    <title>Encriptador</title>
+    <title>Encriptador (beta)</title>
   </head>
+
   <body>
     <header>
       <img class="logoLock" src="lock.png" alt="Logo Lock" />
-      <h1 class="titulogeral">Encrypt</h1>
+      <div class="titleContainer">
+        <h1 class="titulogeral">Encrypt</h1>
+        <p class="betaTag">(beta)</p>
+      </div>
     </header>
 
     <main>
       <section class="secaotextos">
-        <textarea
-          id="textareaencriptar"
-          class="text-area"
-          cols="25"
-          rows="4"
-          placeholder="Digite seu texto"
-        ></textarea>
-        <textarea id="idUnico" class="mensagem" cols="25" rows="4"></textarea>
+        <div class="input-container">
+          <input
+            type="password"
+            id="textareaencriptar"
+            class="text-area"
+            cols="25"
+            rows="4"
+            placeholder="Digite seu texto"
+          />
+          <span
+            type="button"
+            class="btn-show-password"
+            onclick="togglePasswordVisibility('textareaencriptar')"
+          >
+            <div class="fas fa-eye"></div>
+          </span>
+        </div>
+        <div class="input-container">
+          <input
+            type="password"
+            id="idUnico"
+            class="mensagem"
+            cols="25"
+            rows="4"
+          />
+          <span
+            class="btn-show-password"
+            onclick="togglePasswordVisibility('idUnico')"
+          >
+            <div class="fas fa-eye"></div>
+          </span>
+        </div>
       </section>
-
+      <p class="informacao">Não utilize letras maiúsculas no seu texto</p>
       <section class="secaobotoes">
+		<div class="botoesGerarKey">
+			<button id="btnGerar" onclick="generateKeys()" class="btnGerar">
+			  Gerar Key
+			</button>
+			<button id="btnImportar" onclick="importKeys()" class="btnImportar">
+			  Importar Key
+			</button>
+		  </div>
+  
         <div class="botoescripto">
-          <button class="btn-encriptar" onclick="btnEncriptar()">
+          <button
+            class="btn-encriptar"
+            id="btnEncriptar"
+            onclick="toggleButtonCryptography(id)"
+          >
             Criptografar
           </button>
-          <button class="btn-desencriptar" onclick="btnDesencriptar()">
+          <button
+            class="btn-desencriptar"
+            id="btnDesencriptar"
+            onclick="toggleButtonCryptography(id)"
+          >
             Descriptografar
           </button>
         </div>
@@ -52,8 +102,7 @@
   <footer class="footer">
     <p>
       Desenvolvido por
-      <a href="https://www.linkedin.com/in/williamwa7/">William Alves</a>
+      <a href="https://www.linkedin.com/in/williamwa7/">W://iam</a>
     </p>
-    <p>\///\</p>
   </footer>
 </html>

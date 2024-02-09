@@ -12,8 +12,15 @@
   width: 5%;
   height: 5%;
 }
+
 header {
   display: flex;
+  justify-content: center;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: baseline;
   justify-content: center;
 }
 
@@ -24,6 +31,12 @@ header h1 {
 .titulogeral {
   color: #ffffff;
   font-family: "Courier New", Courier, monospace;
+}
+
+.betaTag {
+  color: #d0d0d0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
 }
 
 main {
@@ -40,13 +53,14 @@ main {
   color: #1d1d1d;
   margin: 10px;
   padding: 15px;
-  /*text-transform: lowercase;*/
+  /*text-transform: lowercase; */
 }
 
 ::placeholder {
   color: #505050;
   padding: 10px;
 }
+
 .textarea:focus {
   outline: none;
 }
@@ -81,9 +95,14 @@ main {
 .secaotextos {
   width: auto;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  /* Alterando para coluna em telas menores */
   align-items: center;
+  /* Centralizando os elementos verticalmente */
+}
+
+.informacao {
+  color: lightcoral;
 }
 
 .btn-desencriptar,
@@ -100,7 +119,9 @@ main {
 }
 
 .btn-copiar,
-.btn-colar {
+.btn-colar,
+.btnGerar,
+.btnImportar {
   border: 1px solid #d0d0d0;
   border-radius: 24px;
   color: #d0d0d0;
@@ -119,6 +140,12 @@ p {
   text-align: center;
   font-weight: bold;
 }
+
+.btn-show-password {
+  cursor: pointer;
+  color: #d0d0d0;
+}
+
 
 @media screen and (max-width: 480px) {
   * {
@@ -143,6 +170,15 @@ p {
     width: auto;
     display: flex;
     flex-direction: column;
+    /* Alterando para coluna em telas menores */
+    align-items: center;
+    /* Centralizando os elementos verticalmente */
+  }
+
+  .informacao {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
   }
 
   .secaobotoes {
@@ -164,7 +200,7 @@ p {
 
   .text-area,
   .mensagem {
-    max-width: 100%;
+    max-width: 80%;
     margin-top: 10px;
     padding: 10px;
   }
@@ -172,18 +208,33 @@ p {
   .btn-copiar,
   .btn-colar,
   .btn-encriptar,
-  .btn-desencriptar {
+  .btn-desencriptar
+  {
     margin-left: 10px;
     margin-top: 10px;
     width: 250px;
     height: 50px;
   }
 
-  .footer a, p {
+  .botoesGerarKey {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .btnGerar,
+  .btnImportar {
+    font-size: 16px;
+    width: 115px;
+    height: 50px;
+  }
+
+  .footer a,
+  p {
     font-size: 12px;
     color: #777777;
     text-decoration: none;
     text-align: center;
     font-weight: bold;
   }
+
 }
